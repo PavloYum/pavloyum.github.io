@@ -1,1 +1,58 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #3a3a3a; /* Темный фон, напоминающий металл */
+    color: #f2c14e; /* Цвет латунных элементов */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #c27c0e; /* Золотисто-бронзовый цвет */
+    text-shadow: 2px 2px 2px #000;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #222;
+    border: 3px solid #5a4e4d; /* Темная рамка */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f2c14e; /* Цвет текста */
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="date"], 
+input[type="radio"], 
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #000;
+    background: #f2c14e; /* Латунный цвет */
+    border: 2px solid #5a4e4d;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus, 
+input[type="password"]:focus, 
+input[type="date"]:focus {
+    background: #d9a73f; /*
