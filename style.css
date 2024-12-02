@@ -47,7 +47,7 @@ body {
 }
 
 .left div:nth-child(1) {
-    height: 180px;
+    height: 250px;
     background-image: url('./images/brazil.jpg'); /* Флаг Бразилии */
     background-position: center;
     background-size: contain;
@@ -83,7 +83,7 @@ body {
 }
 
 .right div:nth-child(2) {
-    height: 200px;
+    height: 250px;
     background-image: url('./images/kenya.jpg'); /* Флаг Кении */
     background-position: right;
     background-size: contain;
