@@ -83,7 +83,7 @@ body {
 }
 
 .right div:nth-child(2) {
-    height: 180px;
+    height: 200px;
     background-image: url('./images/kenya.jpg'); /* Флаг Кении */
     background-position: right;
     background-size: contain;
