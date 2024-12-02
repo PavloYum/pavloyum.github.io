@@ -72,6 +72,7 @@ body {
 }
 
 .right div:nth-child(1) {
+    height: auto;
     background-image: url('./images/costa_rica.jpg'); /* Флаг Коста-Рики */
     background-position: center;
     background-size: contain;
