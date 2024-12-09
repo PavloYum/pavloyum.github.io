@@ -80,7 +80,7 @@ withdrawBtn.onclick = function () {
   const accountId = accountIdInput.value.trim();
   const amount = parseFloat(amountInput.value);
 
-  // Find the account by ID
+  
   const account = bank.find((acc) => acc.accountNumber === accountId);
 
   if (!account) {
@@ -95,7 +95,7 @@ withdrawBtn.onclick = function () {
     alert("Invalid amount for withdrawal");
   }
 
-  // Clear inputs
+  
   accountIdInput.value = "";
   amountInput.value = "";
 };
@@ -107,7 +107,7 @@ depositBtn.onclick = function () {
   const accountId = accountIdInput.value.trim();
   const amount = parseFloat(amountInput.value);
 
-  // Find the account by ID
+  
   const account = bank.find((acc) => acc.accountNumber === accountId);
 
   if (!account) {
@@ -122,7 +122,7 @@ depositBtn.onclick = function () {
     alert("Invalid amount for deposit");
   }
 
-  // Clear inputs
+  
   accountIdInput.value = "";
   amountInput.value = "";
 };
