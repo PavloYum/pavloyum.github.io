@@ -1,22 +1,31 @@
-const box = document.querySelector('.box');
-let x = 0; // Координата left
-let y = 0; // Координата top
-let directionX = 1; // Направление по X (1 — вправо, -1 — влево)
-let directionY = 1; // Направление по Y (1 — вниз, -1 — вверх)
+const bank = [];
 
-const t = setInterval(move, 20);
+// Debit card
+// deposit: если вносимая сумма больше 5000 - действие не совершается
+// withdraw: нельзя уходить в минус
+const bankAccount = {
+  accountNumber: "123456789",
+  accountHolderName: "Alice",
+  balance: 0,
+  deposit(sum) {
+    // TODO
+    sum >= 5 && sum <= 5000
+      ? (this.balance += sum)
+      : alert("Вводимая сумма для пополнения баланса некорректная");
+  },
+  withdraw(sum) {
+    // TODO
+    sum <= this.balance && sum > 0
+      ? this.balance -= sum
+      : alert("Вводимая сумма для снятия баланса некорректная");
+  },
+  checkBalance() {
+    alert(this.balance + "€");
+  },
+};
 
-function move() {
-  // Изменение координат квадрата
-  x += directionX;
-  y += directionY;
+bankAccount.deposit(100);
+console.log(bankAccount.balance);
 
-  // Движение вниз и обратно при достижении границ контейнера
-  if (x >= 150 || x <= 0) directionX *= -1; // Меняем направление по X
-  if (y >= 150 || y <= 0) directionY *= -1; // Меняем направление по Y
-
-  // Установка новых координат квадрата
-  box.style.left = `${x}px`;
-  box.style.top = `${y}px`;
-}
-
+bankAccount.withdraw(50);
+console.log(bankAccount.balance);
