@@ -1,15 +1,83 @@
-.container {
-    width: 200px;
-    height: 200px;
-    background-color: green;
-    position: relative;
-    margin: 0 auto;
-  }
-.box {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+/* Общий стиль для страницы */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Светло-серый фон */
+    color: #333; /* Темный текст */
+    line-height: 1.6;
+}
+
+/* Оформление секций */
+section {
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Поля ввода */
+input[type="text"], input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Кнопки */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #0078d4; /* Синий цвет GNOME */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005a9e; /* Более темный синий при наведении */
+}
+
+button:active {
+    background-color: #00457c; /* Еще темнее при нажатии */
+}
+
+/* Список аккаунтов */
+#accountList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#accountList li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f1f1f1; /* Светло-серый фон для списка */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+    }
+
+    button {
+        width: 100%; /* Кнопки занимают всю ширину */
+    }
+}
