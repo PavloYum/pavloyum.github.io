@@ -2,34 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
-    <title>Document</title>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script2.js" defer></script>
+    <title>Список задач</title>
 </head>
 <body>
-    <section id="create">
-        <label for="name">Name:</label>
-        <input type="text" id="name" />
-        <button onclick="createAccount()">Create New Account</button>
-        <button onclick="showAccounts()">Show all accounts</button>
-    </section>
-
-    <section id="show">
-        <ol id="accountList">
-
-        </ol>
-    </section>
-
-    <section id="change">
-        <label for="accountId">Account ID:</label>
-        <input type="text" id="accountId" />
-
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" />
-
-        <button id="withdraw">Withdraw</button>
-        <button id="deposit">Deposit</button>
-    </section>
+<h1 class="title">Список задач</h1>
+<main class="todo-list">
+    <div class="actions">
+        <input class="task-input" type="text" onkeypress="handleKeyPress(event)" />
+        <button class="btn" onclick="addTask()">Создать</button>
+    </div>
+    
+    <div class="status">
+      <button class="btn" id="all" onclick="renderTasks('all')">Все</button>
+      <button class="btn" id="completed" onclick="renderTasks('completed')">Выполненные</button>
+      <button class="btn" id="uncompleted" onclick="renderTasks('uncompleted')">Невыполненные</button>
+    </div>
+    <ul class="list">
+        <li class="list-item list-item_done">Сделать домашку</li>
+        <li class="list-item" id="second-item">Повторить</li>
+        <li class="list-item">Купить молоко</li>
+    </ul>
+</main>
 </body>
 </html>
