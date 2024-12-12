@@ -52,12 +52,21 @@
     align-items: center;
     height: 40px;
     border-radius: 4px;
-    background-color: bisque;
+    background-color: rgb(238, 166, 166);
     margin: 8px 0;
     padding: 8px;
 }
 
 .list-item_done {
     text-decoration: line-through;
-    background-color: darkgray;
+    background-color: rgb(96, 230, 96);
+}
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+    }
+
+    button {
+        width: 100%; /* Кнопки занимают всю ширину */
+    }
 }
